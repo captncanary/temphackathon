@@ -7,26 +7,26 @@ div{
 </style></head>
 <body>
 
-<img src="logo.jpg" alt="logo">
+<img src="logo.jpg" alt="logo" width="150">
 
 <div>
-<p >Policy Holder: &nbsp;</p>
-<p id="policyHolder"></p>
+<h4 >Policy Holder: &nbsp;</h4>
+<h4 id="policyHolder"></h4>
 </div>
 
 <div>
-<p >Address: &nbsp;</p>
-<p id="address"></p>
+<h4 >Phone number: &nbsp;</h4>
+<h4 id="phoneNumber"></h4>
 </div>
 
 <div>
-<p >Phone number: &nbsp;</p>
-<p id="phoneNumber"></p>
+<h4 >Address: &nbsp;</h4>
+<h4 id="address"></h4>
 </div>
 
 <div>
-<p >Insurer: &nbsp;</p>
-<p id="insurer"></p>
+<h4 >Vehicle Reg: &nbsp;</h4>
+<h4 id="registration"></h4>
 </div>
 
 </body>
@@ -49,11 +49,11 @@ div{
 	var phoneTag = document.getElementById("phoneNumber");
 	phoneTag.innerHTML = phone.replaceAll('%20', ' ');
 	
-	const insurer = urlParams.get('insurer');
-	var insurerTag = document.getElementById("insurer");
-	insurerTag.innerHTML = insurer.replaceAll('%20', ' ');
+	const registration = urlParams.get('registration');
+	var registrationTag = document.getElementById("registration");
+	registrationTag.innerHTML = registration.replaceAll('%20', ' ');
 	
   </script>
 </html>
 
-<!--  index.html?policyholder=J%20Smith&address=53%20NR11AB&phone=0123456789&insurer=AceInsurer -->
+<!--  index.html?policyholder=J%20Smith&address=53%20NR11AB&phone=0123456789&registration=M4NGA -->
