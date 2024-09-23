@@ -1,33 +1,40 @@
 <html>
 <head>
 <style>
-div{
- display: flex;
+
+tr 
+{
+    text-align: left; 
+    vertical-align: middle;
+}
+th img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style></head>
 <body>
+       <img src="logo.jpg" alt="logo" style="width: 150px; margin: 20px" />
 
-<img src="logo.jpg" alt="logo" width="150">
-
-<div>
-<h4 >Policy Holder: &nbsp;</h4>
-<h4 id="policyHolder"></h4>
-</div>
-
-<div>
-<h4 >Phone number: &nbsp;</h4>
-<h4 id="phoneNumber"></h4>
-</div>
-
-<div>
-<h4 >Address: &nbsp;</h4>
-<h4 id="address"></h4>
-</div>
-
-<div>
-<h4 >Vehicle Reg: &nbsp;</h4>
-<h4 id="registration"></h4>
-</div>
+<table>
+  <tr>
+    <td>Policy Holder:</td>
+    <td id="policyHolder"></td>
+  </tr>
+  <tr>
+    <td>Phone number: </td>
+    <td id="phoneNumber"></td>
+  </tr>
+  <tr>
+    <td>Address:</td>
+    <td id="address"></td>
+  </tr>
+   <tr>
+    <td>Vehicle Reg:</td>
+    <td id="registration"></td>
+  </tr>
+</table>
 
 </body>
   <script type="text/javascript">
