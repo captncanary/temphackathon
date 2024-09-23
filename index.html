@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+div{
+ display: flex;
+}
+</style></head>
+<body>
+
+<div>
+<p >Policy Holder: &nbsp;</p>
+<p id="policyHolder"></p>
+</div>
+
+<div>
+<p >Address: &nbsp;</p>
+<p id="address"></p>
+</div>
+
+<div>
+<p >Phone number: &nbsp;</p>
+<p id="phoneNumber"></p>
+</div>
+
+<div>
+<p >Insurer: &nbsp;</p>
+<p id="insurer"></p>
+</div>
+
+</body>
+  <script type="text/javascript">
+  
+	
+	const queryString = window.location.search;
+	console.log(queryString);	
+	const urlParams = new URLSearchParams(queryString);
+	
+	const policyHolder = urlParams.get('policyholder');
+	var policyHolderTag = document.getElementById("policyHolder");
+	policyHolderTag.innerHTML = policyHolder.replaceAll('%20', ' ');
+	
+	const address = urlParams.get('address');
+	var addressTag = document.getElementById("address");
+	addressTag.innerHTML = address.replaceAll('%20', ' ');
+	
+	const phone = urlParams.get('phone');
+	var phoneTag = document.getElementById("phoneNumber");
+	phoneTag.innerHTML = phone.replaceAll('%20', ' ');
+	
+	const insurer = urlParams.get('insurer');
+	var insurerTag = document.getElementById("insurer");
+	insurerTag.innerHTML = insurer.replaceAll('%20', ' ');
+	
+  </script>
+</html>
+
+<!--  index.html?policyholder=J%20Smith&address=53%20NR11AB&phone=0123456789&insurer=Aviva -->
