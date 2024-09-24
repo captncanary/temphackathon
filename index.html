@@ -27,19 +27,19 @@ th img
 <img src="logo.jpg" alt="logo" style="width: 150px; margin: 20px" />
 
 <table>
-  <tr>
+  <tr id="holderRow" style="display: none;">
     <td>Policy Holder:</td>
     <td id="policyHolder"></td>
   </tr>
-  <tr>
+  <tr id="phoneRow" style="display: none;">
     <td>Phone number: </td>
     <td id="phoneNumber"></td>
   </tr>
-  <tr>
+  <tr id="addressRow" style="display: none;">
     <td>Address:</td>
     <td id="address"></td>
   </tr>
-   <tr>
+  <tr id="vehicleRegRow" style="display: none;">
     <td>Vehicle Reg:</td>
     <td id="registration"></td>
   </tr>
@@ -50,24 +50,36 @@ th img
   
 	
 	const queryString = window.location.search;
-	console.log(queryString);	
 	const urlParams = new URLSearchParams(queryString);
 	
 	const policyHolder = urlParams.get('policyholder');
-	var policyHolderTag = document.getElementById("policyHolder");
-	policyHolderTag.innerHTML = policyHolder.replaceAll('%20', ' ');
+	
+	if (policyHolder) {
+		var policyHolderTag = document.getElementById("policyHolder");
+	    policyHolderTag.innerHTML = policyHolder?.replaceAll('%20', ' ');
+		document.getElementById("holderRow").style.display = "table-row";
+	}
 	
 	const address = urlParams.get('address');
-	var addressTag = document.getElementById("address");
-	addressTag.innerHTML = address.replaceAll('%20', ' ');
+	if (address) {
+		var addressTag = document.getElementById("address");
+	    addressTag.innerHTML = address?.replaceAll('%20', ' ');
+		document.getElementById("addressRow").style.display = "table-row";
+	}
 	
 	const phone = urlParams.get('phone');
-	var phoneTag = document.getElementById("phoneNumber");
-	phoneTag.innerHTML = phone.replaceAll('%20', ' ');
+	if (phone) {
+		var phoneTag = document.getElementById("phoneNumber");
+	    phoneTag.innerHTML = phone?.replaceAll('%20', ' ');
+		document.getElementById("phoneRow").style.display = "table-row";
+	}
 	
 	const registration = urlParams.get('registration');
-	var registrationTag = document.getElementById("registration");
-	registrationTag.innerHTML = registration.replaceAll('%20', ' ');
+	if (registration) {
+		var registrationTag = document.getElementById("registration");
+		registrationTag.innerHTML = registration?.replaceAll('%20', ' ');
+		document.getElementById("vehicleRegRow").style.display = "table-row";
+	}
 	
   </script>
 </html>
