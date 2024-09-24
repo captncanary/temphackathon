@@ -24,7 +24,7 @@ th img
 <body>
 
 <div>
-<img src="logo.jpg" alt="logo" style="width: 150px; margin: 20px" />
+<img src="logo.jpg" alt="logo" style="width: 150px; margin-bottom: 20px" />
 
 <table>
   <tr id="holderRow" style="display: none;">
@@ -53,7 +53,6 @@ th img
 	const urlParams = new URLSearchParams(queryString);
 	
 	const policyHolder = urlParams.get('policyholder');
-	
 	if (policyHolder) {
 		var policyHolderTag = document.getElementById("policyHolder");
 	    policyHolderTag.innerHTML = policyHolder?.replaceAll('%20', ' ');
